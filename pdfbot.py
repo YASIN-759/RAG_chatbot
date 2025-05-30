@@ -12,13 +12,11 @@ class PDFQAApp:
         self.root.title("PDF Q&A with FAISS Embeddings")
         self.root.geometry("700x600")
         
-        # Embedding model
         self.embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
         
         self.db_folder = None
         self.vectorstore = None
-        
-        # UI Elements
+# GUI
         self.load_btn = tk.Button(root, text="Load PDF", command=self.load_pdf)
         self.load_btn.pack(pady=10)
         
@@ -41,7 +39,6 @@ class PDFQAApp:
             return
         
         try:
-            # Load PDF
             loader = PyPDFLoader(file_path)
             documents = loader.load()
             
