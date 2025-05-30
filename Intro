@@ -1,0 +1,10 @@
+Bismillah...
+A Standalone File, 
+how it works:
+- first of all, create embeddings through 'from langchain_community.embeddings import HuggingFaceEmbeddings'
+- second, create pdf text to chunks 
+    'from langchain_community.document_loaders import PyPDFLoader'
+    'from langchain.text_splitter import RecursiveCharacterTextSplitter'
+- third, create vector store using FAISS 'from langchain_community.vectorstores import FAISS'
+- forth, load the vector database.
+GUI is use so the user can ask questions.
